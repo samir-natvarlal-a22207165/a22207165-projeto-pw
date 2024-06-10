@@ -1,0 +1,41 @@
+{% extends 'artigos/layout.html' %}
+
+{% block title %}Detalhes do Artigo: {{ artigo.titulo }}{% endblock %}
+
+{% block content %}
+    <h2>{{ artigo.titulo }}</h2>
+    <p>Autor: {{ artigo.autor.usuario.username }}</p>
+    <p>Data de Publicação: {{ artigo.data_publicacao }}</p>
+    <p>Categoria: {{ artigo.categoria.nome }}</p>
+    <p>Conteúdo: {{ artigo.conteudo }}</p>
+
+    <h3>Comentários:</h3>
+    <ul>
+        {% for comentario in comentarios %}
+            <li>{{ comentario.conteudo }} - {{ comentario.data_publicacao }}</li>
+            {% if request.user.is_authenticated %}
+            <li><a href="{% url 'artigos:edita_comentario' comentario.id %}"><button>Editar informação do Comentario</button></a></li>
+            <li><a href="{% url 'artigos:apaga_comentario' comentario.id %}"><button>Apagar Comentario</button></a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <h3>Avaliações:</h3>
+    <ul>
+        {% for avaliacao in avaliacoes %}
+            <li>{{ avaliacao.autor.username }} deu um Rating de {{ avaliacao.rating }} estrelas</li>
+            {% if request.user.is_authenticated %}
+            <li><a href="{% url 'artigos:edita_avaliacao' avaliacao.id %}"><button>Editar informação da Avaliacao</button></a></li>
+            <li><a href="{% url 'artigos:apaga_avaliacao' avaliacao.id %}"><button>Apagar Avaliacao</button></a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'artigos:edita_artigo' artigo.id %}"><button>Editar informação do Artigo</button></a>
+        <a href="{% url 'artigos:apaga_artigo' artigo.id %}"><button>Apagar Artigo</button></a>
+        <a href="{% url 'artigos:edita_autor' artigo.autor.id %}"><button>Editar informação do Autor</button></a>
+        <a href="{% url 'artigos:apaga_autor' artigo.autor.id %}"><button>Apagar Autor</button></a>
+        <a href="{% url 'artigos:edita_categoria' artigo.categoria.id %}"><button>Editar informação da Categoria</button></a>
+        <a href="{% url 'artigos:apaga_categoria' artigo.categoria.id %}"><button>Apagar Categoria</button></a>
+    {% endif %}
+{% endblock %}

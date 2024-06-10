@@ -1,0 +1,24 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <h3>{{ musica.nome }}</h3>
+    <ul>
+        <li>O nome da Banda é {{ musica.album.banda.nome }}</li>
+        <li>O nome do Album é {{ musica.album.nome }}</li>
+        <li>Spotify Link:
+            {% if musica.spotify_link %}
+                <a href="{{ musica.spotify_link }}">Link para o Spotify</a>
+            {% else %}
+                Nenhum link do Spotify disponível.
+            {% endif %}
+        </li>
+        <li>Esta música é de {{ musica.ano }} </li>
+        <li>Esta música tem uma Duração de {{ musica.duracao }} segundos</li>
+    </ul>
+    <p>Um pedaço da Música: {{ musica.letra }}</p>
+    <p>{{ musica.biografia }}</p>
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'bandas:edita_musica' musica.id %}"><button>Editar informação da Musica</button></a>
+        <a href="{% url 'bandas:apaga_musica' musica.id %}"><button>Apagar Musica</button></a>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Metereologia{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'meteo/meteo.css' %}">
+</head>
+<body>
+    {% block header %}
+    {% endblock %}
+
+    {% block nav %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+
+    <script>
+
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        });
+
+        document.addEventListener('scroll', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            if (window.scrollY > 0) {
+                menuToggle.classList.add('scrolled');
+            } else {
+                menuToggle.classList.remove('scrolled');
+            }
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends 'portefolio/layout.html' %}
+
+{% block titlePage %}Projetos{% endblock %}
+{% block title %}Projetos{% endblock %}
+
+    {% block navEdit %}
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'portefolio:novo_projeto' %}" class="struct-green">Criar Projeto</a>
+        {% endif %}
+    {% endblock %}
+
+{% block content %}
+    <h3> Projetos do Curso de Lei </h3>
+    <ul>
+    {% for projeto in projetos %}
+        <li class="project-item">
+            <a href="{% url 'portefolio:projeto' projeto.id %}" class="container">{{ projeto.nome_projeto }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <p>Existem registradas {{ bandas|length }} Bandas:</p>
+    <ul>
+    {% for banda in bandas %}
+        <li class="container"><a href="{% url 'bandas:banda' banda.id %}">{{ banda.nome }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}

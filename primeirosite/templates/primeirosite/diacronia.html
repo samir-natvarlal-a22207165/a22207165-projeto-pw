@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diacronia do Latim</title>
+    <style>
+        body {
+            background-color: hsla(240, 100%, 50%, 0.2);
+            color: white;
+        }
+
+    .botao {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .botao:hover {
+        background-color: #0056b3;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Diacronia do Latim</h1>
+        <nav>
+            <a href="{% url 'primeirosite:descricao' %}" class="botao">Descrição</a>
+            <a href="{% url 'primeirosite:caracteristicas' %}" class="botao">Características</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Diacronia da Língua Latita</h2>
+        <p>O latim inclui-se entre as línguas itálicas, e seu alfabeto baseia-se no alfabeto itálico antigo,<br>
+            derivado do alfabeto grego. No século IX ou VIII a.C., o latim foi trazido para a península Itálica pelos migrantes latinos,<br>
+            que se fixaram numa região que recebeu o nome de Lácio, situada ao longo do rio Tibre, onde a civilização romana viria a desenvolver-se.<br>
+            Naqueles primeiros anos, o latim sofreu a influência da língua etrusca, proveniente do norte da península e que não era uma língua indo-europeia.</p>
+        <p>Além das variações regionais, mesmo o latim de Roma não foi uma língua sempre igual a si mesma, apresentando fortes diferenças diacrônicas e sociolinguísticas. Do ponto de vista diacrônico, deve-se distinguir:</p>
+        <ul>
+            <li>latim pré-literário, a língua das inscrições (do século VII a.C. ao século II a.C.);</li>
+            <li>latim vulgar (sermo vulgaris, sermo usualis ou sermo plebeius) é a língua coloquial usada por diferentes camadas da população romana, desde a aristocracia até o povo iletrado</li>
+            <li>latim medieval, do século VI ao século XIV, período de surgimento das línguas românicas;</li>
+            <li>latim renascentista, do século XIV ao século XVII;</li>
+            <li>neolatim (ou latim científico), do século XVII ao século XIX.</li>
+        </ul>
+        <p>Embora a literatura romana sobrevivente seja composta quase inteiramente de obras em latim clássico,<br>
+            a língua falada no Império Romano do Ocidente na Antiguidade tardia (200 a 600 d.C.)[5] era o latim vulgar,<br>
+            que diferia do primeiro em sua gramática, vocabulário e pronúncia.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Diacronia do Latim, Universidade Lusófona e Wikipédia - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% extends 'portefolio/layout.html' %}
+
+{% block titlePage %}Curso{% endblock %}
+
+    {% block navEdit %}
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'portefolio:edita_curso' curso.id %}" class="struct-green">Editar Curso</a>
+            <a href="{% url 'portefolio:apaga_curso' curso.id %}" class="struct-red">Apagar Curso</a>
+        {% endif %}
+    {% endblock %}
+
+{% block content %}
+    <h3> {{ curso.nome }} </h3>
+    <p>Apresentação do Curso:</p>
+    <p> {{ curso.apresentacao }} </p>
+    <p>Objetivos do Curso:</p>
+    <p> {{ curso.objetivos }} </p>
+    <p>Competências do Curso:</p>
+    <p> {{ curso.competencias }} </p>
+{% endblock %}

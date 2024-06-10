@@ -1,0 +1,21 @@
+{% extends 'portefolio/layout.html' %}
+
+{% block titlePage %}Cursos{% endblock %}
+{% block title %}Cursos da Lúsofona{% endblock %}
+
+    {% block navEdit %}
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'portefolio:novo_curso' %}" class="struct-green">Criar Curso</a>
+        {% endif %}
+    {% endblock %}
+
+{% block content %}
+    <p>Existem registrados {{ cursos|length }} Cursos:</p>
+    <ul>
+    {% for curso in cursos %}
+        <li class="project-item">
+            <a href="{% url 'portefolio:curso' curso.id %}" class="container">{{ curso.nome }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

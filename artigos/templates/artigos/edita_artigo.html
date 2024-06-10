@@ -1,0 +1,40 @@
+{% extends 'artigos/layout.html' %}
+
+{% block content %}
+    <h3>Edita Artigo</h3>
+
+    <div>
+        <form action="{% url 'artigos:edita_artigo' artigo.id %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="id_autor">Autor:</label><br>
+            <select id="id_autor" name="autor">
+                {% for autor in autores %}
+                    <option value="{{ autor.usuario.id }}">{{ autor.usuario.username }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+
+            <label for="id_titulo">Título:</label><br>
+            <input type="text" id="id_titulo" name="titulo" value="{{ artigo.titulo }}" placeholder="Insira o título..."><br><br>
+
+            <label for="id_conteudo">Conteúdo:</label><br>
+            <input type="text" id="id_conteudo" name="conteudo" value="{{ artigo.conteudo }}" placeholder="Insira o conteúdo..."><br><br>
+
+            <label for="id_categoria">Categoria:</label><br>
+            <select id="id_categoria" name="categoria">
+                {% for categoria in categorias %}
+                    <option value="{{ categoria.nome }}">{{ categoria.nome }}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+
+            <label for="id_data_publicacao">Data de Publicação:</label><br>
+            <input type="datetime-local" id="id_data_publicacao" name="data_publicacao" value="{{ artigo.data_publicacao|date:'Y-m-d\TH:i' }}"><br><br>
+
+            <label for="id_imagem_destaque">Imagem de Destaque:</label><br>
+            <input type="file" id="id_imagem_destaque" name="imagem_destaque"><br><br>
+
+            <input type="submit" value="Salvar">
+        </form>
+    </div>
+{% endblock %}

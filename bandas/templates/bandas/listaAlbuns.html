@@ -1,0 +1,12 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <p>Existem registrados {{ albuns|length }} Albuns:</p>
+    <ul>
+    {% for album in albuns %}
+        <li class="container">
+            <a href="{% url 'bandas:album' album.id %}" class="banda-link">{{ album.nome }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Características do Latim</title>
+    <style>
+        body {
+            background-color: hsla(240, 100%, 50%, 0.2);
+            color: white;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .botao:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Características do Latim</h1>
+        <nav>
+            <a href="{% url 'primeirosite:descricao' %}" class="botao">Descrição</a>
+            <a href="{% url 'primeirosite:diacronia' %}" class="botao">Diacronia</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Detalhes da Língua Latita</h2>
+        <p>O latim é uma língua flexiva. No caso dos substantivos e adjetivos, a flexão é denominada declinação; no caso dos verbos, conjugação.</p>
+        <p>No latim clássico cada substantivo ou adjetivo pode tomar seis formas ou casos:</p>
+        <ul>
+            <li>Caso nominativo (sujeito e predicativo do sujeito);</li>
+            <li>Caso genitivo (indicando posse ou especificação);</li>
+            <li>Caso dativo (objeto indireto);</li>
+            <li>Caso acusativo (objeto direto);</li>
+            <li>Caso vocativo (vocativo);</li>
+            <li>Caso ablativo (complementos circunstanciais).</li>
+        </ul>
+        <p>Também existem resquícios de um sétimo caso de origem indo-europeia, o locativo, que indica localização (por exemplo: domī, "em casa"),<br>
+            no entanto, este é limitado a palavras específicas.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Características do Latim, Universidade Lusófona e Wikipédia - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block titlePage %}Curso{% endblock %}</title>
+        <style>
+
+            html, body {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                background-color: #42B5A2;
+            }
+
+            .struct > * {
+                background-color: rgba(255, 255, 255, 0.6);
+                padding: 1rem;
+                border: 1px solid black;
+                font-size: 2rem;
+                transition: box-shadow 0.6s ease;
+            }
+
+            header {grid-area: header;}
+            nav {grid-area: menu;}
+            main {grid-area: main;}
+            footer {grid-area: footer;}
+
+            header, footer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            div.struct {
+                background-color: #42B5A2;
+                display: grid;
+
+                grid-template-areas:
+                    'header header  header'
+                    'menu   main    main'
+                    'menu   footer  footer';
+                gap: 10px;
+                padding: 10px;
+                grid-template-columns: 20vw 5fr;
+                grid-template-rows: 15vh 1fr 50px;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 5px 0;
+                text-align: center;
+                text-decoration: none;
+                color: black;
+                padding: 10px 20px;
+                transition: all 0.3s ease;
+                border: 1px solid transparent;
+            }
+
+            nav a:hover {
+                background-color: rgba(255, 255, 255, 0.8);
+                color: #42B5A2;
+                border-radius: 5px;
+            }
+
+            .container {
+                margin: 5px 0;
+                text-align: center;
+                text-decoration: none;
+                color: black;
+                padding: 10px 20px;
+                transition: all 0.5s ease;
+                border: 1px solid transparent;
+                background-color: #5CF1D9;
+                border-radius: 5px;
+            }
+
+            .container:hover {
+                background-color: rgba(255, 255, 255, 0.8);
+                color: #5CF1D9;
+                border: 1px solid black;
+            }
+
+            .project-item {
+                margin-bottom: 25px;
+            }
+
+            .project-item:last-child {
+                margin-bottom: 0;
+            }
+
+            .struct-green:hover {
+                color: darkgreen;
+                background-color: rgba(0, 130, 0, 0.2);
+                border-radius: 5px;
+            }
+
+            .struct-red:hover {
+                color: darkred;
+                background-color: rgba(130, 0, 0, 0.2);
+                border-radius: 5px;
+            }
+
+            .struct > *:hover {
+                box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8);
+            }
+
+            @media (max-width: 768px) {
+
+                html, body {
+                    background-color: #E08C2C;
+                }
+
+                div.struct {
+                    grid-template-areas:
+                        'header'
+                        'menu'
+                        'main'
+                        'footer';
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                    background-color: #E08C2C;
+                }
+
+                .struct > * {
+                    background-color: rgba(255, 255, 255, 0.8);
+                }
+
+                .container {
+                    background-color: #E08C2C;
+                }
+
+                .container:hover {
+                    color: #E08C2C;
+                }
+
+                nav {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                nav a {
+                    flex: 1 1 100%;
+                    margin: 5px;
+                }
+
+                nav a:hover {
+                    background-color: rgba(255, 255, 255, 0.8);
+                    color: #E08C2C;
+                }
+
+                header, footer {
+                    font-size: 1.5rem;
+                    padding: 1rem;
+                    background-color: #E08C2C;
+                }
+
+                main {
+                    font-size: 1.5rem;
+                    padding: 1rem;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .struct > * {
+                    font-size: 1.2rem;
+                    padding: 0.5rem;
+                }
+
+                nav a {
+                    font-size: 1rem;
+                    padding: 0.5rem;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class = "struct">
+        <header>{% block title %}Curso da Lúsofona{% endblock %}</header>
+        <nav>
+            <a href="{% url 'menu:index' %}">Menu</a>
+            <a href="{% url 'portefolio:curso' curso_id=1 %}">Curso-LEI</a>
+            <a href="{% url 'portefolio:cursos' %}">Cursos</a>
+            <a href="{% url 'portefolio:disciplinas' %}">Disciplinas</a>
+            <a href="{% url 'portefolio:projetos' %}">Projetos</a>
+            {% block navEdit %}
+            {% endblock %}
+            {% if request.user.is_authenticated %}
+                <a href="{% url 'user' %}">Username: {{ request.user.username }}</a>
+                <a href="{% url 'logout' %}" class="struct-red">Logout</a>
+            {% else %}
+                <a href="{% url 'login' %}" class="struct-green">Login</a>
+            {% endif %}
+        </nav>
+
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <footer>Curso da Lusófona - Todos os Direitos Reservados</footer>
+        </div>
+    </body>
+</html>

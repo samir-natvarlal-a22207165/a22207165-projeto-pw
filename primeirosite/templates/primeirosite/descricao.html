@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descrição do Latim</title>
+    <style>
+        body {
+            background-color: hsla(240, 100%, 50%, 0.2);
+            color: white;
+        }
+
+    .botao {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .botao:hover {
+        background-color: #0056b3;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Descrição do Latim</h1>
+        <nav>
+            <a href="{% url 'primeirosite:caracteristicas' %}" class="botao">Características</a>
+            <a href="{% url 'primeirosite:diacronia' %}" class="botao">Diacronia</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>A Língua Latina</h2>
+        <p>A língua latina ou latim é uma antiga língua indo-europeia do ramo itálico,<br>
+            originalmente falada no Lácio, a região em volta da cidade de Roma. Foi amplamente difundida,<br>
+            especialmente na Europa Ocidental, como a língua oficial da República Romana, do Império Romano e,<br>
+            após a conversão deste último ao cristianismo, da Igreja Católica Romana. Através da Igreja Católica,<br>
+            tornou-se a língua dos acadêmicos e filósofos europeus medievais. Por ser uma língua altamente flexiva e sintética,<br>
+            a sua sintaxe (ordem das palavras) é, em alguma medida, variável, se comparada com a de idiomas analíticos como o mandarim,<br>
+            embora em prosa os romanos tendessem a preferir a ordem SOV. A sintaxe é indicada por uma estrutura de afixos ligados a temas.<br>
+            O alfabeto latino, derivado dos alfabetos etrusco e grego (por sua vez, derivados do alfabeto fenício),<br>
+            continua a ser o mais amplamente usado no mundo.</p>
+        <p>O latim ainda é a língua oficial da Cidade do Vaticano e do Rito Romano da Igreja Católica.<br>
+            Foi a principal língua litúrgica até o Concílio Vaticano Segundo nos anos 1960. O latim clássico,<br>
+            a língua literária do final da República e do início do Império Romano, ainda hoje é ensinado em muitas escolas primárias e secundárias,<br>
+            embora seu papel se tenha reduzido desde o início do século XX.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Descrição do Latim, Universidade Lusófona e Wikipédia - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

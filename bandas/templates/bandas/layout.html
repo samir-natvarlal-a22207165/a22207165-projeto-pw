@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'bandas/bandas.css' %}">
+        <script src="https://kit.fontawesome.com/7308176b1f.js" crossorigin="anonymous"></script>
+        <title>Bandas</title>
+    </head>
+    <body>
+        <header>
+            <h1>Bandas Famosas</h1>
+            <div class="separador">
+                <div><a href="{% url 'menu:index' %}">Menu</a></div>
+                <div><a href="{% url 'bandas:listaBandas' %}"><i class="fa-solid fa-music"></i>Bandas</a></div>
+                <div><a href="{% url 'bandas:listaAlbuns' %}"><i class="fa-solid fa-music"></i>Albuns</a></div>
+                <div><a href="{% url 'bandas:listaMusicas' %}"><i class="fa-solid fa-music"></i>Musicas</a></div>
+                <div><a href="{% url 'bandas:registo_bandas' %}"><i class="fa-solid fa-music"></i>Sign In</a></div>
+                <div><a href="{% url 'bandas:novo_banda' %}">Inserir nova Banda</a></div>
+                <div><a href="{% url 'bandas:novo_album' %}">Inserir novo Album</a></div>
+                <div><a href="{% url 'bandas:novo_musica' %}">Inserir nova Musica</a></div>
+                {% if request.user.is_authenticated %}
+                    <div><a>Username:{{request.user.username}}</a></div>
+                    <div><a href="{% url 'bandas:logout_bandas' %}">Logout</a></div>
+                {% else %}
+                    <div><a href="{% url 'bandas:login_bandas' %}">Login</a></div>
+                {% endif %}
+            </div>
+        </header>
+
+        <main>
+
+            {% block content %}
+            {% endblock %}
+
+        </main>
+
+        <footer>
+            <p>Bandas Famosas - Todos os Direitos Reservados</p>
+        </footer>
+    </body>
+</html>

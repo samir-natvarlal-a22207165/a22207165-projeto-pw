@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webTools</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .parallax {
+            background-image: url("/static/menu/af0dd0acd1bfbe4a3a9f5a88167eca8f.jpg"); /* tem de ser desta forma por ter algum erro */
+            height: 100vh;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Adiciona direção de coluna para empilhar os elementos verticalmente */
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+
+        .content-box {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 80%;
+            margin-bottom: 40px;
+        }
+
+        .parallax > .content-box:first-child {
+            margin-top: 200px;
+        }
+
+        .content-box video {
+            max-width: 100%;
+            max-height: 30vh;
+            border-radius: 10px;
+        }
+
+        .content-box a {
+            display: block;
+            margin-top: 10px;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            transition: text-shadow 0.3s ease-in-out;
+        }
+
+        .content-box h1 {
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        .content-box a:hover {
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 12px rgba(255, 255, 255, 0.6), 0 0 16px rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="parallax">
+            <div class="content-box">
+                <h1>Video de Apresentação</h1>
+                <video controls>
+                    <source src="/static/menu/videoApresentacaoPW.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+                <a href="{% url 'menu:index' %}">Return to Menu</a>
+            </div>
+            <div class="content-box">
+                <h1>Video MVC</h1>
+                <video controls>
+                    <source src="/static/menu/videoPW_MVC.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+                <a href="{% url 'menu:index' %}">Return to Menu</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

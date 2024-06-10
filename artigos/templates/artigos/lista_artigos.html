@@ -1,0 +1,12 @@
+{% extends 'artigos/layout.html' %}
+
+{% block title %}Lista de Artigos{% endblock %}
+
+{% block content %}
+    <h2>Lista de Artigos</h2>
+    <ul>
+        {% for artigo in artigos %}
+            <li><a href="{% url 'artigos:detalhes_artigo' artigo.id %}">{{ artigo.titulo }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

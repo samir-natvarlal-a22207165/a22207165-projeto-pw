@@ -1,0 +1,24 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <h3>{{ album.nome }}</h3>
+    {% if album.capa %}
+        <img src="{{ album.capa.url }}" width="150px" class="imgMoldura">
+    {% else %}
+        <p>Nenhuma imagem disponível para este álbum.</p>
+    {% endif %}
+    <ul>
+        <li>O nome da Banda é {{ album.banda.nome }}</li>
+        <li>Músicas:</li>
+            <ul>
+                {% for musica in album.musica_set.all %}
+                    <li><a href="{% url 'bandas:musica' musica.id %}">{{ musica.nome }}</a></li>
+                {% endfor %}
+            </ul>
+        <li> {{ album.banda.informacoes_variadas }}</li>
+    </ul>
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'bandas:edita_album' album.id %}"><button>Editar informação do Album</button></a>
+        <a href="{% url 'bandas:apaga_album' album.id %}"><button>Apagar Album</button></a>
+    {% endif %}
+{% endblock %}

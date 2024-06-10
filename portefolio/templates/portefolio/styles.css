@@ -1,0 +1,49 @@
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    header {
+        background-color: #f2f2f2; /* Cinza claro */
+        padding: 20px;
+    }
+
+    main {
+        background-color: #f0f0f0; /* Branco ligeiramente acinzentado */
+        padding: 20px;
+    }
+
+    .separador {
+        background-color: #333; /* Cor de fundo da barra de navegação */
+        overflow: hidden;
+        display: flex; /* Para alinhar os itens */
+        align-items: center; /* Para centralizar verticalmente */
+        padding: 20px 10px; /* Adicionei um padding para espaço interno */
+    }
+
+    .separador div:last-child {
+        margin-left: auto; /* Move o último elemento filho para o lado direito */
+    }
+
+    .separador a {
+        color: #fff; /* Cor do texto */
+        text-decoration: none; /* Removendo sublinhado */
+        padding: 10px 20px; /* Espaçamento interno */
+        border: 1px solid transparent; /* Borda transparente */
+        border-radius: 5px; /* Borda arredondada */
+        transition: all 0.3s ease; /* Transição suave */
+    }
+
+    .separador a:hover {
+        background-color: #555; /* Cor de fundo quando o mouse passa sobre o link */
+        border-color: #fff; /* Cor da borda quando o mouse passa sobre o link */
+    }
+
+    .separador .separador_vermelho:hover {
+        background-color: rgba(255, 0, 0, 0.3);
+    }
+
+    .separador .separador_verde:hover {
+        background-color: rgba(0, 255, 0, 0.3);
+    }

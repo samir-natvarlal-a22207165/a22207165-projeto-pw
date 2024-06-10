@@ -1,0 +1,18 @@
+{% extends 'portefolio/layout.html' %}
+
+{% block titlePage %}Criar Docente{% endblock %}
+{% block title %}Criar um Novo Docente{% endblock %}
+
+{% block content %}
+    <h3>Novo Docente</h3>
+
+    <form action="" method="post" enctype='multipart/form-data'>
+
+      {% csrf_token %}
+      <table>
+          {{ form }}
+      </table>
+      <input type="submit" value="Criar Docente">
+    </form>
+
+{% endblock %}

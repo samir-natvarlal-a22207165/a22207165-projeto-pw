@@ -1,0 +1,234 @@
+{
+  "bandas": [
+    {
+      "nome": "Queen",
+      "ano": 1970,
+      "nacionalidade": "Reino Unido",
+      "informacoes_variadas": "Banda de rock britânica",
+      "albuns": [
+        {
+          "nome": "A Night at the Opera",
+          "musicas": [
+            {
+              "nome": "Bohemian Rhapsody",
+              "ano": 1975,
+              "duracao": 354
+            },
+            {
+              "nome": "Love of My Life",
+              "ano": 1975,
+              "duracao": 222
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "The Beatles",
+      "ano": 1960,
+      "nacionalidade": "Reino Unido",
+      "informacoes_variadas": "Banda de rock britânica",
+      "albuns": [
+        {
+          "nome": "Abbey Road",
+          "musicas": [
+            {
+              "nome": "Come Together",
+              "ano": 1969,
+              "duracao": 259
+            },
+            {
+              "nome": "Something",
+              "ano": 1969,
+              "duracao": 182
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Led Zeppelin",
+      "ano": 1968,
+      "nacionalidade": "Reino Unido",
+      "informacoes_variadas": "Banda de rock britânica",
+      "albuns": [
+        {
+          "nome": "Led Zeppelin IV",
+          "musicas": [
+            {
+              "nome": "Stairway to Heaven",
+              "ano": 1971,
+              "duracao": 482
+            },
+            {
+              "nome": "Black Dog",
+              "ano": 1971,
+              "duracao": 296
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Pink Floyd",
+      "ano": 1965,
+      "nacionalidade": "Reino Unido",
+      "informacoes_variadas": "Banda de rock progressivo britânica",
+      "albuns": [
+        {
+          "nome": "The Dark Side of the Moon",
+          "musicas": [
+            {
+              "nome": "Money",
+              "ano": 1973,
+              "duracao": 382
+            },
+            {
+              "nome": "Time",
+              "ano": 1973,
+              "duracao": 413
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "The Rolling Stones",
+      "ano": 1962,
+      "nacionalidade": "Reino Unido",
+      "informacoes_variadas": "Banda de rock britânica",
+      "albuns": [
+        {
+          "nome": "Sticky Fingers",
+          "musicas": [
+            {
+              "nome": "Brown Sugar",
+              "ano": 1971,
+              "duracao": 212
+            },
+            {
+              "nome": "Wild Horses",
+              "ano": 1971,
+              "duracao": 340
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "AC/DC",
+      "ano": 1973,
+      "nacionalidade": "Austrália",
+      "informacoes_variadas": "Banda de hard rock australiana",
+      "albuns": [
+        {
+          "nome": "Back in Black",
+          "musicas": [
+            {
+              "nome": "Back in Black",
+              "ano": 1980,
+              "duracao": 255
+            },
+            {
+              "nome": "You Shook Me All Night Long",
+              "ano": 1980,
+              "duracao": 210
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Metallica",
+      "ano": 1981,
+      "nacionalidade": "Estados Unidos",
+      "informacoes_variadas": "Banda de heavy metal americana",
+      "albuns": [
+        {
+          "nome": "Metallica (The Black Album)",
+          "musicas": [
+            {
+              "nome": "Enter Sandman",
+              "ano": 1991,
+              "duracao": 332
+            },
+            {
+              "nome": "The Unforgiven",
+              "ano": 1991,
+              "duracao": 386
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Nirvana",
+      "ano": 1987,
+      "nacionalidade": "Estados Unidos",
+      "informacoes_variadas": "Banda de rock alternativo americana",
+      "albuns": [
+        {
+          "nome": "Nevermind",
+          "musicas": [
+            {
+              "nome": "Smells Like Teen Spirit",
+              "ano": 1991,
+              "duracao": 301
+            },
+            {
+              "nome": "Come as You Are",
+              "ano": 1991,
+              "duracao": 219
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "U2",
+      "ano": 1976,
+      "nacionalidade": "Irlanda",
+      "informacoes_variadas": "Banda de rock irlandesa",
+      "albuns": [
+        {
+          "nome": "The Joshua Tree",
+          "musicas": [
+            {
+              "nome": "With or Without You",
+              "ano": 1987,
+              "duracao": 296
+            },
+            {
+              "nome": "Where the Streets Have No Name",
+              "ano": 1987,
+              "duracao": 337
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "The Doors",
+      "ano": 1965,
+      "nacionalidade": "Estados Unidos",
+      "informacoes_variadas": "Banda de rock americana",
+      "albuns": [
+        {
+          "nome": "The Doors",
+          "musicas": [
+            {
+              "nome": "Light My Fire",
+              "ano": 1967,
+              "duracao": 433
+            },
+            {
+              "nome": "Break on Through (To the Other Side)",
+              "ano": 1967,
+              "duracao": 141
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

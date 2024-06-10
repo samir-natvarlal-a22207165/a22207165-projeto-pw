@@ -1,0 +1,17 @@
+{% extends 'menu/layout.html' %}
+
+{% block title %}Outros sites{% endblock %}
+
+{% block content %}
+
+    <div class="other-sites-container">
+        <ul>
+            <li><a href="{% url 'menu:cv' %}">CV</a></li>
+            <li><a href="{% url 'meteo:index' %}">Metereologia</a></li>
+            <li><a href="{% url 'bandas:listaBandas' %}">Bandas</a></li>
+            <li><a href="{% url 'pwsite:index' %}">PwSite</a></li>
+            <li><a href="{% url 'primeirosite:descricao' %}">PrimeiroSite</a></li>
+        </ul>
+    </div>
+
+{% endblock %}

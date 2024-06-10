@@ -1,0 +1,15 @@
+{% extends 'portefolio/layout.html' %}
+
+{% block titlePage %}Edita Projeto{% endblock %}
+{% block title %}Edita o Projeto{% endblock %}
+
+{% block content %}
+    <h3>Edita Projeto</h3>
+
+    <form action="{% url 'portefolio:edita_projeto' projeto.id %}" method="post" enctype='multipart/form-data'>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit">
+    </form>
+
+{% endblock %}

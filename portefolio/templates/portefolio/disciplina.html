@@ -1,0 +1,75 @@
+{% extends 'portefolio/layout.html' %}
+
+{% block titlePage %}Disciplina{% endblock %}
+{% block title %}Disciplina{% endblock %}
+
+    {% block navEdit %}
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'portefolio:edita_disciplina' disciplina.id %}" class="struct-green">Editar Disciplina</a>
+            <a href="{% url 'portefolio:apaga_disciplina' disciplina.id %}" class="struct-red">Apagar Disciplina</a>
+        {% endif %}
+    {% endblock %}
+
+{% block content %}
+    <h3>{{ disciplina.nome }}</h3>
+    <p>Esta disciplina é do {{disciplina.ano}}º ano, {{disciplina.semestre}}º semestre</p>
+    <p>Esta disciplina vale {{disciplina.ects}} ECTS</p>
+
+    {% if disciplina.area_cientifica %}
+        <p>A área científica desta disciplina é {{disciplina.area_cientifica.nome}}</p>
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'portefolio:edita_areaCientifica' disciplina.area_cientifica.id %}"><button>Editar AreaCientifica</button></a>
+            <a href="{% url 'portefolio:apaga_areaCientifica' disciplina.area_cientifica.id %}"><button>Apagar AreaCientifica</button></a>
+        {% endif %}
+    {% else %}
+        <p>Esta disciplina ainda não foi atribuída um Área cientifica</p>
+    {% endif %}
+    {% if request.user.is_authenticated %}
+            <a href="{% url 'portefolio:novo_areaCientifica' %}"><button>Criar AreaCientifica</button></a>
+    {% endif %}
+
+    <h4>Projetos relacionados:</h4>
+    {% if disciplina.projeto %}
+        <ul>
+            <li><a href="{% url 'portefolio:projeto' projeto_id=disciplina.projeto.id %}">{{ disciplina.projeto.nome_projeto }}</a></li>
+        </ul>
+    {% else %}
+        <p>Não há projetos relacionados a esta disciplina.</p>
+    {% endif %}
+
+    <h4>Linguagens de Programação associadas:</h4>
+    {% if disciplina.linguagemprogramacao_set.all %}
+        <ul>
+            {% for linguagem in disciplina.linguagemprogramacao_set.all %}
+                <li>{{ linguagem.nome }}</li>
+                {% if request.user.is_authenticated %}
+                    <a href="{% url 'portefolio:edita_linguagemProgramacao' linguagem.id %}"><button>Editar LinguagemProgramacao</button></a>
+                    <a href="{% url 'portefolio:apaga_linguagemProgramacao' linguagem.id %}"><button>Apagar LinguagemProgramacao</button></a>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Não há linguagens de programação associadas a esta disciplina.</p>
+    {% endif %}
+    {% if request.user.is_authenticated %}
+            <a href="{% url 'portefolio:novo_linguagemProgramacao' %}"><button>Criar LinguagemProgramacao</button></a>
+    {% endif %}
+
+    <h4>Docentes associados:</h4>
+    {% if disciplina.docente_set.all %}
+        <ul>
+            {% for docente in disciplina.docente_set.all %}
+                <li>{{ docente.nome }}</li>
+                {% if request.user.is_authenticated %}
+                    <a href="{% url 'portefolio:edita_docente' docente.id %}"><button>Editar Docente</button></a>
+                    <a href="{% url 'portefolio:apaga_docente' docente.id %}"><button>Apagar Docente</button></a>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Não há docentes associados a esta disciplina.</p>
+    {% endif %}
+    {% if request.user.is_authenticated %}
+            <a href="{% url 'portefolio:novo_docente' %}"><button>Criar Docente</button></a>
+    {% endif %}
+{% endblock %}

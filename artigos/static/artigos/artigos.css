@@ -1,0 +1,104 @@
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+        background-color: #333;
+        color: white;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    nav ul li a button {
+        background-color: #555;
+        border: none;
+        color: white;
+        padding: 10px 15px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    nav ul li a button:hover {
+        background-color: #777;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 5px 0;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
+
+    .username {
+        font-weight: bold;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    div {
+      background-color: whitesmoke;
+      padding: 20px;
+      border: 1px solid grey;
+      border-radius: 8px;
+    }
+
+    input {
+      display: inline-block;
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+       border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    input[type=submit] {
+      background-color: purple;
+      opacity: 0.8;
+      font-weight: bold;
+      color: white;
+    }
+
+    input[type=submit]:hover {
+      opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+    }

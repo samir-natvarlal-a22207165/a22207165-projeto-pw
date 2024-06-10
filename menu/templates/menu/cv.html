@@ -1,0 +1,10 @@
+{% extends 'menu/layout.html' %}
+
+{% block title %}CV{% endblock %}
+
+{% block content %}
+    <div class="cv-container">
+        {% load static %}
+        <img src="{% static 'menu/CV.png' %}" alt="CV Image">
+    </div>
+{% endblock %}

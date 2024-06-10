@@ -1,0 +1,34 @@
+{% extends 'autenticacao/layout.html' %}
+
+{% block content %}
+<div class="wrapper">
+    <form action="{% url 'registo' %}" method="post" class="form">
+        {% csrf_token %}
+        <h2>Registo</h2>
+        <div class="input-field">
+            <input type="text" name="username" required>
+            <label>Username</label>
+        </div>
+        <div class="input-field">
+            <input type="text" name="nome" required>
+            <label>Nome</label>
+        </div>
+        <div class="input-field">
+            <input type="text" name="apelido" required>
+            <label>Apelido</label>
+        </div>
+        <div class="input-field">
+            <input type="email" name="email" required>
+            <label>Email</label>
+        </div>
+        <div class="input-field">
+            <input type="password" name="password" required>
+            <label>Password</label>
+        </div>
+        <button type="submit">Create</button>
+        <div class="register">
+            <p>Already have an account? <a href="{% url 'login' %}">Log in</a></p>
+        </div>
+    </form>
+</div>
+{% endblock %}

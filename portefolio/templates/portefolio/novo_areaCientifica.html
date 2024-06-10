@@ -1,0 +1,18 @@
+{% extends 'portefolio/layout.html' %}
+
+{% block titlePage %}Criar AreaCientifica{% endblock %}
+{% block title %}Criar uma Nova Área Científica{% endblock %}
+
+{% block content %}
+    <h3>Nova AreaCientifica</h3>
+
+    <form action="" method="post" enctype='multipart/form-data'>
+
+      {% csrf_token %}
+      <table>
+          {{ form }}
+      </table>
+      <input type="submit" value="Criar AreaCientifica">
+    </form>
+
+{% endblock %}

@@ -1,0 +1,392 @@
+{
+  "cursos": [
+    {
+      "nome": "LEI",
+      "apresentacao": "O curso de licenciatura em Engenharia Informática da Universidade Lusófona forma licenciados capazes de assumir posições de destaque em projetos de engenharia informática ou equipas de desenvolvimento e consultadoria, na área da engenharia dos sistemas de informação, assumindo pela sua formação e atitude relevantes na geração de inovação e riqueza. Nesse sentido, os estudantes obtém as competências adequadas à conceçãoo, realização e manutenção de sistemas informáticos, programação de aplicações e de sistemas, desenho arquiteturas de computação e comunicações, gestão de sistemas de informação e de conhecimento, assim como à compreensão e resolução dos problemas associados.",
+      "objetivos": "Os objetivos desta licenciatura são os seguintes:\r\n1. Fornecer um perfil profissional reconhecido no mercado, com fortes competências em Tecnologias de Informação e Comunicação, garantindo um elevado grau de empregabilidade e a possibilidade de prosseguir estudos de 2º ciclo com excelentes perspectivas de sucesso.\r\n2. Garantir um ensino de excelência assente num corpo docente de qualidade, integrando especialistas e doutorados com elevado potencial pedagógico e actividade comprovada em investigação.\r\n3. Dar acesso a estágios e formação em ambiente empresarial no decorrer do percurso académico, em colaboração com empresas líderes de mercado, potenciando níveis de qualificação profissional elevados antes da conclusção do curso.\r\n4. Garantir a realização de Trabalhos Finais de Curso inseridos em projectos inovadores, pelo facto dos muitos dos seus docentes estarem agregados a Centros de Investigação reconhecidos, participar em projectos de I&D e desenvolver parcerias com o meio empresarial.\r\n5. Desenvolver o espírito empreendedor dos alunos, através do Centro de Incubação de Empresas PLAY que apoia ideias de jovens empreendedores",
+      "competencias": "O curso de licenciatura em Engenharia Informática da Universidade Lusófona desenvolve perfis com fortes competências tecnológicas e humanas, de forma a potenciar aos seus licenciados um elevado grau de empregabilidade, ou o prosseguimento dos estudos de 2º ciclo com excelentes perspectivas de sucesso. Os licenciados em Eng.Informática têm assim a possibilidade de escolher diversas carreiras profissionais:\r\n- Analista Programador \r\n- Consultor na área das TI\r\n- Arquitecto de Soluções\r\n- Arquitecto/Administrador de Redes\r\n\r\nNas seguintes áreas tecnológicas:\r\n- Desenvolvimento de Aplicações Empresariais\r\n- Desenvolvimento de Aplicações Móveis\r\n- Concepção e Gestão de Repositórios de Informação\r\n- Novos Paradigmas da Internet (Cloud Computing, Redes Sociais)\r\n- Gestão de Sistemas Informáticos\r\n- Etc.."
+    }
+  ],
+  "areas_cientificas": [
+    {
+        "nome": "Informática e Sistemas de Informação"
+    },
+    {
+        "nome": "Física"
+    },
+    {
+        "nome": "Informática"
+    },
+    {
+        "nome": "Matemática"
+    },
+    {
+        "nome": "Engenharia Eletrónica"
+    },
+    {
+        "nome": "Ciências Comportamentais"
+    },
+    {
+        "nome": "Estatística"
+    },
+    {
+        "nome": "Engenharia de Software"
+    },
+    {
+        "nome": "Processamento de Imagem"
+    },
+    {
+        "nome": "Redes de Computadores"
+    },
+    {
+        "nome": "Informática Móvel"
+    },
+    {
+        "nome": "Inteligência Artificial"
+    },
+    {
+        "nome": "Segurança Informática"
+    },
+    {
+        "nome": "Sistemas de Informação"
+    },
+    {
+        "nome": "Ciência de Dados"
+    },
+    {
+        "nome": "Interação Humano-Computador"
+    }
+  ],
+  "disciplinas": [
+    {
+        "nome": "Trabalho Final de Curso",
+        "ano": 3,
+        "semestre": 0,
+        "ects": 20,
+        "curricularIUnitReadableCode": "ULHT260-5140",
+        "curso": "LEI",
+        "area_cientifica": "Informática e Sistemas de Informação"
+    },
+    {
+        "nome": "Fundamentos de Física",
+        "ano": 1,
+        "semestre": 1,
+        "ects": 6,
+        "curricularIUnitReadableCode": "ULHT260-7336",
+        "curso": "LEI",
+        "area_cientifica": "Física"
+    },
+    {
+        "nome": "Fundamentos de Programação",
+        "ano": 1,
+        "semestre": 1,
+        "ects": 6,
+        "curricularIUnitReadableCode": "ULHT260-7337",
+        "curso": "LEI",
+        "area_cientifica": "Informática"
+    },
+    {
+        "nome": "Matemática Discreta",
+        "ano": 1,
+        "semestre": 1,
+        "ects": 6,
+        "curricularIUnitReadableCode": "ULHT260-1656",
+        "curso": "LEI",
+        "area_cientifica": "Matemática"
+    },
+    {
+        "nome": "Matemática I",
+        "ano": 1,
+        "semestre": 1,
+        "ects": 6,
+        "curricularIUnitReadableCode": "ULHT260-1",
+        "curso": "LEI",
+        "area_cientifica": "Matemática"
+    },
+    {
+        "nome": "Sistemas Digitais",
+        "ano": 1,
+        "semestre": 1,
+        "ects": 6,
+        "curricularIUnitReadableCode": "ULHT260-7",
+        "curso": "LEI",
+        "area_cientifica": "Engenharia Eletrónica"
+    },
+    {
+        "nome": "Álgebra Linear",
+        "ano": 1,
+        "semestre": 2,
+        "ects": 5,
+        "curricularIUnitReadableCode": "ULHT260-2091",
+        "curso": "LEI",
+        "area_cientifica": "Matemática"
+    },
+    {
+        "nome": "Algoritmia e Estruturas de Dados",
+        "ano": 1,
+        "semestre": 2,
+        "ects": 6,
+        "curricularIUnitReadableCode": "ULHT260-13397",
+        "curso": "LEI",
+        "area_cientifica": "Informática"
+    },
+    {
+        "nome": "Arquitetura de Computadores",
+        "ano": 1,
+        "semestre": 2,
+        "ects": 5,
+        "curricularIUnitReadableCode": "ULHT260-5857",
+        "curso": "LEI",
+        "area_cientifica": "Engenharia Eletrónica"
+    },
+    {
+        "nome": "Competências Comportamentais",
+        "ano": 1,
+        "semestre": 2,
+        "ects": 4,
+        "curricularIUnitReadableCode": "ULHT260-17267",
+        "curso": "LEI",
+        "area_cientifica": "Ciências Comportamentais"
+    },
+    {
+        "nome": "Linguagens de Programação I",
+        "ano": 1,
+        "semestre": 2,
+        "ects": 5,
+        "curricularIUnitReadableCode": "ULHT260-498",
+        "curso": "LEI",
+        "area_cientifica": "Informática"
+    },
+    {
+        "nome": "Matemática II",
+        "ano": 1,
+        "semestre": 2,
+        "ects": 5,
+        "curricularIUnitReadableCode": "ULHT260-505",
+        "curso": "LEI",
+        "area_cientifica": "Matemática"
+    },
+    {
+        "nome": "Arquitetura Avançada de Computadores",
+        "ano": 2,
+        "semestre": 1,
+        "ects": 6,
+        "curricularIUnitReadableCode": "ULHT260-13398",
+        "curso": "LEI",
+        "area_cientifica": "Engenharia Eletrónica"
+    },
+    {
+        "nome": "Base de Dados",
+        "ano": 2,
+        "semestre": 1,
+        "ects": 6,
+        "curricularIUnitReadableCode": "ULHT260-1792",
+        "curso": "LEI",
+        "area_cientifica": "Informática"
+    },
+    {
+        "nome": "Linguagens de Programação II",
+        "ano": 2,
+        "semestre": 1,
+        "ects": 6,
+        "curricularIUnitReadableCode": "ULHT260-898",
+        "curso": "LEI",
+        "area_cientifica": "Informática"
+    },
+    {
+        "nome": "Probabilidades e Estatística",
+        "ano": 2,
+        "semestre": 1,
+        "ects": 6,
+        "curricularIUnitReadableCode": "ULHT260_620",
+        "curso": "LEI",
+        "area_cientifica": "Estatística"
+    },
+    {
+        "nome": "Sistemas Operativos",
+        "ano": 2,
+        "semestre": 1,
+        "ects": 6,
+        "curricularIUnitReadableCode": "ULHT260-6305",
+        "curso": "LEI",
+        "area_cientifica": "Informática"
+    },
+    {
+        "nome": "Engenharia de Requisitos e Testes",
+        "ano": 2,
+        "semestre": 2,
+        "ects": 6,
+        "curricularIUnitReadableCode": "ULHT260-22512",
+        "curso": "LEI",
+        "area_cientifica": "Engenharia de Software"
+    },
+    {
+        "nome": "Processamento de Imagem",
+        "ano": 2,
+        "semestre": 2,
+        "ects": 6,
+        "curricularIUnitReadableCode": "ULHT260-19082",
+        "curso": "LEI",
+        "area_cientifica": "Processamento de Imagem"
+    },
+    {
+        "nome": "Programação Web",
+        "ano": 2,
+        "semestre": 2,
+        "ects": 6,
+        "curricularIUnitReadableCode": "ULHT260-11195",
+        "curso": "LEI",
+        "area_cientifica": "Informática"
+    },
+    {
+        "nome": "Redes de Computadores",
+        "ano": 2,
+        "semestre": 2,
+        "ects": 6,
+        "curricularIUnitReadableCode": "ULHT260-1793",
+        "curso": "LEI",
+        "area_cientifica": "Redes de Computadores"
+    },
+    {
+        "nome": "Sistemas de Suporte à Decisão",
+        "ano": 2,
+        "semestre": 2,
+        "ects": 6,
+        "curricularIUnitReadableCode": "ULHT260-7303",
+        "curso": "LEI",
+        "area_cientifica": "Informática"
+    },
+    {
+        "nome": "Trabalho Final de Curso",
+        "ano": 3,
+        "semestre": 0,
+        "ects": 20,
+        "curricularIUnitReadableCode": "ULHT260-5140",
+        "curso": "LEI",
+        "area_cientifica": "Informática e Sistemas de Informação"
+    },
+    {
+        "nome": "Computação Distribuída",
+        "ano": 3,
+        "semestre": 1,
+        "ects": 5,
+        "curricularIUnitReadableCode": "ULHT260-7348",
+        "curso": "LEI",
+        "area_cientifica": "Informática"
+    },
+    {
+        "nome": "Data Science",
+        "ano": 3,
+        "semestre": 1,
+        "ects": 5,
+        "curricularIUnitReadableCode": "ULHT260-22513",
+        "curso": "LEI",
+        "area_cientifica": "Ciência de Dados"
+    },
+    {
+        "nome": "Engenharia de Software",
+        "ano": 3,
+        "semestre": 1,
+        "ects": 5,
+        "curricularIUnitReadableCode": "ULHT260-7341",
+        "curso": "LEI",
+        "area_cientifica": "Engenharia de Software"
+    },
+    {
+        "nome": "Interação Humano-Máquina",
+        "ano": 3,
+        "semestre": 1,
+        "ects": 5,
+        "curricularIUnitReadableCode": "ULHT260-11047",
+        "curso": "LEI",
+        "area_cientifica": "Interação Humano-Computador"
+    },
+    {
+        "nome": "Computação Móvel",
+        "ano": 3,
+        "semestre": 2,
+        "ects": 5,
+        "curricularIUnitReadableCode": "ULHT260-16925",
+        "curso": "LEI",
+        "area_cientifica": "Informática Móvel"
+    },
+    {
+        "nome": "Inteligência Artificial",
+        "ano": 3,
+        "semestre": 2,
+        "ects": 5,
+        "curricularIUnitReadableCode": "ULHT260-2129",
+        "curso": "LEI",
+        "area_cientifica": "Inteligência Artificial"
+    },
+    {
+        "nome": "Segurança Informática",
+        "ano": 3,
+        "semestre": 2,
+        "ects": 5,
+        "curricularIUnitReadableCode": "ULHT260-11194",
+        "curso": "LEI",
+        "area_cientifica": "Segurança Informática"
+    },
+    {
+        "nome": "Sistemas de Informação na Nuvem",
+        "ano": 3,
+        "semestre": 2,
+        "ects": 5,
+        "curricularIUnitReadableCode": "ULHT260-22514",
+        "curso": "LEI",
+        "area_cientifica": "Sistemas de Informação"
+    }
+  ],
+  "projetos": [
+    {
+        "nome_projeto": "Jogo das Tendas",
+        "descricao": "Desenvolver uma grelha 2D que simule o terreno do jogo, com árvores distribuídas aleatoriamente. Permitir que o jogador coloque tendas junto às árvores, assegurando que cada tenda esteja ligada apenas a uma árvore.Implementar regras para assegurar que as tendas não se toquem, nem mesmo na diagonal, e criar uma interface de linha de comando para a interação do jogador com o jogo.",
+        "conceitos_aplicados": "Programação em Kotlin: ciclos, funções, arrays, arrays2D, leitura do teclado, escrita no ecrã.",
+        "tecnologias_usadas": "Kotlin / IntelliJ",
+        "disciplina": "Fundamentos de Programação"
+    }
+  ],
+  "linguagens_programacao": [
+    {
+        "nome": "Kotlin"
+    },
+    {
+        "nome": "Java"
+    },
+    {
+        "nome": "C"
+    },
+    {
+        "nome": "C#"
+    },
+    {
+        "nome": "Assembly"
+    },
+    {
+        "nome": "Python"
+    },
+    {
+        "nome": "C++"
+    },
+    {
+        "nome": "HTML"
+    },
+    {
+        "nome": "MySQL"
+    },
+    {
+        "nome": "MariaDB"
+    }
+  ],
+  "docentes": [
+    {
+        "nome": "Pedro Alves",
+        "disciplinas": ["Fundamentos de Programação", "Algoritmia e Estruturas de Dados", "Linguagens de Programação II", "Computação Móvel"]
+    },
+    {
+        "nome": "Lúcio Studer Ferreira",
+        "disciplinas": ["Fundamentos de Programação", "Programação Web"]
+    }
+  ]
+}

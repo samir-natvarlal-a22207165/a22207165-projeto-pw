@@ -1,0 +1,53 @@
+{% extends 'meteo/layout.html' %}
+{% load static %}
+{% block title %} {{ city }} {% endblock %}
+
+{% block header %}
+    <header><h1>{{ city }}</h1></header>
+{% endblock %}
+
+{% block nav %}
+    <nav id="nav-menu" class="nav-menu">
+        <div>
+            <div class="scroll">
+                {% for localidade in localidades %}
+                    <a href="{% url 'meteo:city' localidade.id %}" class = "center">{{ localidade.nome }}</a>
+                {% endfor %}
+            </div>
+            {% if user.is_authenticated %}
+                <a href="{% url 'logout' %}" class='red'>Logout</a>
+            {% else %}
+                <a href="{% url 'login' %}" class='green'>Login</a>
+            {% endif %}
+        </div>
+    </nav>
+{% endblock %}
+
+{% block content %}
+    <section>
+        <a href="{% url 'meteo:city_dia' id 0%}"><button>Hoje</button></a>
+        <a href="{% url 'meteo:index'%}"><button>Refresh</button></a>
+        {% if weather%}
+            <h1>Previsão do Tempo para {{ city }}</h1>
+            <hr>
+            {% for day in weather%}
+                {% if day %}
+                    <h2>{{ day.forecastDate }} <img src="{% static day.idWeatherType %}"></h2>
+                    <p><b>Máxima:</b> {{ day.tMax }}°C</p>
+                    <p><b>Mínima:</b> {{ day.tMin }}°C</p>
+                    <p><b>Probabilidade de Precipitação:</b> {{ day.precipitaProb }}%</p>
+                    <b>Vento:</b>
+                    <ul class= "buttons">
+                        <li><p><b>  Direção:</b> {{ day.predWindDir }}</p></li>
+                        <li><p><b>  Velocidade:</b> {{ day.classWindSpeed }} km/h</p></li>
+                    </ul>
+                {% else %}
+                    <p>Dados não disponíveis.</p>
+                {% endif %}
+                <hr>
+            {% endfor %}
+        {% else %}
+            Sem info;
+        {% endif%}
+    </section>
+{% endblock %}

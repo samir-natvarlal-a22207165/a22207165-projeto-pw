@@ -1,0 +1,12 @@
+{% extends 'bandas/layout.html' %}
+
+{% block content %}
+    <p>Existem registrados {{ musicas|length }} Musicas:</p>
+    <ul>
+    {% for musica in musicas %}
+        <li class="container">
+            <a href="{% url 'bandas:musica' musica.id %}" class="banda-link">{{ musica.nome }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
